@@ -33,11 +33,11 @@ if __name__ == '__main__':
     # the search space, a search method, and a timeout.
 
     opt = Shadho(
-        'convex-tutorial-distributed',   # Name of this experiment
-        'bash evaluate.sh',  # The function to optimize
-        search_space,        # The search space to sample
-        method='random',     # The sampling method, one of 'random', 'bayes', 'tpe', 'smac'
-        timeout=30           # The time to run the search, in seconds.
+        'distributed-tutorial',  # Name of this experiment
+        'bash evaluate.sh',      # The function to optimize
+        search_space,            # The search space to sample
+        method='random',         # The sampling method, one of 'random', 'bayes', 'tpe', 'smac'
+        timeout=30               # The time to run the search, in seconds.
     ) 
 
     # Before running the search, we add files that should be sent to the
