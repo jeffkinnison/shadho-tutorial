@@ -3,7 +3,7 @@
 # shadho_worker is a python module sent to the worker automatically along with
 # your code that takes care of loading the hyperparmeters and packaging the
 # results in a way that SHADHO understands.
-import shadho_worker
+
 
 import time
 
@@ -60,6 +60,7 @@ def main(params):
     """
     # Extract the kernel name and parameters. This is just a short expression
     # to get the only dictionary entry, which should have our hyperparameters.
+    kernel = list(params.keys())[0]
     kernel_params = list(params.values())[0]
 
     # Load the training and test sets.
@@ -71,11 +72,7 @@ def main(params):
     # Set up the SVM with its parameterized kernel. The long form of instantiation
     # is done here to show what `kernel_params` looks like internally.
     # This can be shortened to `svc = SVC(**kernel_params)`
-    svc = SVC(kernel=kernel_params['kernel'],
-              C=kernel_params['C'],
-              gamma=kernel_params['gamma'] if 'gamma' in kernel_params else None,
-              coef0=kernel_params['coef0'] if 'coef0' in kernel_params else None,
-              degree=kernel_params['degree'] if 'degree' in kernel_params else None)
+    svc = SVC(kernel=kernel, **kernel_params)
 
     # Set up parallel training across as many cores as are available on the
     # worker.
@@ -123,4 +120,8 @@ def main(params):
 if __name__ == '__main__':
     # All you have to do next is pass your objective function (in this case,
     # main) to shadho_worker.run, and it will take care of the rest.
-    shadho_worker.run(main)
+    
+    print(main({'rbf': {'C': 12, 'gamma': 0.3456}}))
+    
+    # import shadho_worker
+    # shadho_worker.run(main)
