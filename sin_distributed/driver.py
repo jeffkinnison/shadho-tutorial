@@ -6,6 +6,10 @@ function. Files are sent to the objective
 Note that objective() has been moved to `objective.py`
 """
 
+import math
+
+import numpy as np
+
 # From SHADHO, we want to import the driver (Shadho object) and the API that
 # defines various search spaces.
 from shadho import Shadho, spaces
@@ -20,8 +24,8 @@ if __name__ == '__main__':
     # defined here.
     
     search_space = {
-        'x': spaces.uniform(0, math.pi),
-        'y': [i * 0.001 for i in range(1000 * math.pi)]
+        'x': spaces.uniform(0, 2 * math.pi),
+        'y': list(np.linspace(0, 2 * math.pi, 1000))
     }
 
     # We next set up the optimizer, which will attempt to minimize the

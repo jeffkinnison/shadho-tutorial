@@ -33,7 +33,7 @@ def objective(params):
     x = params['x']
     y = params['y']
 
-    return math.sin(x) * math.cos(y)
+    return np.sin(x) * np.cos(y)
 
 
 if __name__ == '__main__':
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     # defined here.
     search_space = {
         'x': spaces.uniform(0, 2 * math.pi),
-        'y': spaces.choice(np.linspace(0, 2 * math.pi, 1000))
+        'y': spaces.choice(list(np.linspace(0, 2 * math.pi, 1000)))
     }
 
     # We next set up the optimizer, which will attempt to minimize the
