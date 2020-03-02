@@ -64,6 +64,12 @@ if __name__ == '__main__':
     # and the file containing the dataset.
     opt.add_input_file('evaluate.sh')
     opt.add_input_file('train_svm.py')
-    opt.add_input_file('')
+    opt.add_input_file('mnist.npz')
+
+    # We can also add compute classes, groups of expected workers with
+    # similar available hardware.
+    opt.add_compute_class('16-core', 'cores', 16, max_tasks=20)
+    opt.add_compute_class('8-core', 'cores', 8, max_tasks=25)
+    opt.add_compute_class('4-core', 'cores', 4, max_tasks=50)
 
     opt.run()
