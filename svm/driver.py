@@ -68,8 +68,8 @@ if __name__ == '__main__':
 
     # We can also add compute classes, groups of expected workers with
     # similar available hardware.
-    opt.add_compute_class('16-core', 'cores', 16, max_tasks=20)
-    opt.add_compute_class('8-core', 'cores', 8, max_tasks=25)
-    opt.add_compute_class('4-core', 'cores', 4, max_tasks=50)
+    # opt.add_compute_class('16-core', 'cores', 16)
+    # opt.add_compute_class('8-core', 'cores', 8)
+    # opt.add_compute_class('4-core', 'cores', 4)
 
     opt.run()

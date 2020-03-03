@@ -86,7 +86,7 @@ def main(params):
     # Train and compute the training time.
     start = time.time()
     s.fit(X_train, y_train)
-    train_time = time.time() - start
+    train_time = time.time() - startcd ../
 
     # Generate and encode testing set predictions, along with prediction time.
     start = time.time()
@@ -96,7 +96,7 @@ def main(params):
     loss_labels = encoder.fit_transform(predictions)
 
     # Compute performance metrics on the test set to return to SHADHO
-    loss = log_loss(y_test, loss_labels, labels=encoder.classes_)
+    loss = log_loss(y_test, loss_labels, labels=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     acc = accuracy_score(y_test, predictions)
     p = precision_score(y_test, predictions, average='micro')
     r = recall_score(y_test, predictions, average='micro')
