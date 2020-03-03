@@ -35,3 +35,5 @@ screen and load a contour plot of the evaluations.
 NOTE: If jobs are not running, make sure that the driver is running on a machine
 that can be reached on the Internet (i.e., public-facing, not firewalled).
 
+
+[MNIST](http://yann.lecun.com/exdb/mnist/)

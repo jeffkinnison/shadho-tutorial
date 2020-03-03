@@ -33,3 +33,5 @@ screen and load a plot of the evaluations per kernel.
 
 NOTE: If jobs are not running, make sure that the driver is running on a machine
 that can be reached on the Internet (i.e., public-facing, not firewalled).
+
+[CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
