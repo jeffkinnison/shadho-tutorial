@@ -22,7 +22,8 @@ Computer vision as a field now relies on learning algorithms, particularly deep 
 6. Neural Architecture Search
 7. Hyperparameter Importance
 
-[Slides]()
+[Slides](https://jeffkinnison.github.io/shadho-tutorial/files/)
+[Source](https://github.com/jeffkinnison/shadho-tutorial)
 
 ## SHADHO Examples
 
@@ -32,5 +33,5 @@ Computer vision as a field now relies on learning algorithms, particularly deep 
 4. Optimizing Neural Network Structure
 5. Going Forward
 
-[Slides]()
+[Slides](https://jeffkinnison.github.io/shadho-tutorial/files/)
 

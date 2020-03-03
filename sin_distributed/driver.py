@@ -51,7 +51,3 @@ if __name__ == '__main__':
     # Results are written to 'results.json'.
     
     opt.run()
-
-    # We can also plot the results.
-    
-    opt.plot_objective()

@@ -63,6 +63,3 @@ if __name__ == '__main__':
     # We then run the optimization, and SHADHO records the results.
     # Results are written to 'results.json'.
     opt.run()
-
-    # We can also plot the results.
-    opt.plot_objective()
