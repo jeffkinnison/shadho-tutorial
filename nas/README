@@ -22,13 +22,13 @@ python3 -m shadho.workers.workqueue --master convex-tutorial
 
 # OR if the user running the master differs from the current user
 
-python3 -m shadho.workers.workqueue -M svm-tutorial -u <username>
+python3 -m shadho.workers.workqueue -M cnn-tutorial -u <username>
 
 # for example, if the master is running under user "shadho" on its host machine, run
-# python3 -m shadho.workers.workqueue -M svm-tutorial -u shadho
+# python3 -m shadho.workers.workqueue -M cnn-tutorial -u shadho
 ```
 
-This will run SHADHO for 30 seconds then print the optimal hyperparameters to
+This will run SHADHO for one hour then print the optimal hyperparameters to
 screen and load a plot of the evaluations per kernel.
 
 NOTE: If jobs are not running, make sure that the driver is running on a machine
