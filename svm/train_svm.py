@@ -86,7 +86,7 @@ def main(params):
     # Train and compute the training time.
     start = time.time()
     s.fit(X_train, y_train)
-    train_time = time.time() - startcd ../
+    train_time = time.time() - start
 
     # Generate and encode testing set predictions, along with prediction time.
     start = time.time()
