@@ -21,7 +21,7 @@ scikit-learn==0.22.2
 scipy==1.4.1
 shadho==0.3.0
 six==1.14.0
-torch==1.4.0
+torch==1.13.1
 torchvision==0.5.0
 typed-ast==1.4.1
 wrapt==1.11.2
